@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script src="../One-Page Website/JS/one_page_website.js"></script>
 		<title>The Ketogenic Diet</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
@@ -15,7 +16,7 @@
 			<h2>A very low carb diet with numerous health benefits.</h2>
 			<h4><em>(You should always consult your healthcare provider before changing your diet!)</em></h4>
 			<p>The ketogenic diet is a high-fat, adequate-protein, low-carbohydrate mainstream dietary therapy that in medicine is used mainly to treat hard-to-control (refractory) epilepsy in children. The diet forces the body to burn fats rather than carbohydrates.<p>
-		</section>				
+		</section>			
 	</head>
 	<body>
 		<section id="videos">
@@ -25,12 +26,94 @@
 		</section>	
 		<section id="pictures">
 			<h2>Keto Food List Pictures</h2>
-			<img src="healthy fats.jpg" alt="fats" width="400" height="350">
-			<img src="keto all day.png" alt="all day" width="400" height="350"><br><br>
-			<img src="magnesium.jpg" alt="magnesium" width="400" height="350">
-			<img src="pantry.jpg" alt="pantry" width="400" height="350"><br><br>
-			<img src="proteins.jpg" alt="proteins" width="400" height="350">
-			<img src="vegetables.jpg" alt="vegetables" width="400" height="350"><br><br>
+			<div class="row">
+				<div class="column">
+					<img src="healthy fats.jpg" alt="fats" width="400" height="350" onclick="openModal();currentSlide(1)" class="hover-shadow">
+				</div>	
+				<div class="column">
+					<img src="keto all day.png" alt="all day" width="400" height="350" onclick="openModal();currentSlide(2)" class="hover-shadow">
+				</div>
+				<div class="column">	
+					<img src="magnesium.jpg" alt="magnesium" width="400" height="350" onclick="openModal();currentSlide(3)" class="hover-shadow">
+				</div>
+				<div class="column">	
+					<img src="pantry.jpg" alt="pantry" width="400" height="350" onclick="openModal();currentSlide(4)" class="hover-shadow">
+				</div>
+				<div class="column">	
+					<img src="proteins.jpg" alt="proteins" width="400" height="350" onclick="openModal();currentSlide(5)" class="hover-shadow">
+				</div>
+				<div class="column">	
+					<img src="vegetables.jpg" alt="vegetables" width="400" height="350" onclick="openModal();currentSlide(6)" class="hover-shadow">
+				</div>
+			</div>
+			
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+			  
+				  <div class="mySlides">
+					<div class="numbertext">1 / 6</div>
+					<img src="healthy fats.jpg" width="1200" height=700>
+				  </div>
+			  
+				  <div class="mySlides">
+					<div class="numbertext">2 / 6</div>
+					<img src="keto all day.png" width="1200" height=700>
+				  </div>
+			  
+				  <div class="mySlides">
+					<div class="numbertext">3 / 6</div>
+					<img src="magnesium.jpg" width="1200" height=700>
+				  </div>
+			  
+				  <div class="mySlides">
+					<div class="numbertext">4 / 6</div>
+					<img src="pantry.jpg" width="1200" height=700>
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext">5 / 6</div>
+					<img src="proteins.jpg" width="1200" height=700>
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext">6 / 6</div>
+					<img src="vegetables.jpg" width="1200" height=700>
+				  </div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<div class="column">
+				<img class="demo" src="healthy fats.jpg" width="180" height="200" onclick="currentSlide(1)" alt="Some Healthy Fats">
+			</div>
+		  
+			<div class="column">
+				<img class="demo" src="keto all day.png" width="180" height="200" onclick="currentSlide(2)" alt="Meals throughout the day">
+			</div>
+		  
+			<div class="column">
+				<img class="demo" src="magnesium.jpg"  width="180" height="200" onclick="currentSlide(3)" alt="Magnesium Sources">
+			</div>
+		  
+			<div class="column">
+				<img class="demo" src="pantry.jpg" width="180" height="200" onclick="currentSlide(4)" alt="Ketogenic pantry">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="proteins.jpg" width="180" height="200" onclick="currentSlide(5)" alt="Healthy Protein Sources">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="vegetables.jpg" width="180" height="200" onclick="currentSlide(6)" alt="Keto Friendly Vegetables">
+			</div>
+		</div>
+		</div>		
+
 		</section>
 		<section id="contact">
 		<h2>Contact us for personalized meal plans!</h2>
